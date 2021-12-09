@@ -12,6 +12,6 @@
     typedef struct date_t
     {
         int dd, mm, yyyy;
-    }*date;
+    }date;
     
 #endif

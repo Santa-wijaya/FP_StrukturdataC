@@ -6,7 +6,10 @@
 void main(){
     int status = 1, menu;
     data main_node = NULL;
-    date current_date = NULL;
+    date current_date;
+
+    get_current_date(&current_date);
+    printf("\n< Current Date : %d/%d/%d >\n\n", current_date.dd, current_date.mm, current_date.yyyy);
 
     while(status){
         header_print(&menu);

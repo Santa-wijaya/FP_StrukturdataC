@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "menu1.h": "c",
+        "header.h": "c",
+        "stdio.h": "c",
+        "data_type.h": "c"
+    }
+}
