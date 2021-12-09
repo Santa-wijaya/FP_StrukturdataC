@@ -7,8 +7,6 @@ void main(){
     int status = 1, menu;
     data main_node = NULL;
     date current_date = NULL;
-    
-    //test Repo//
 
     while(status){
         header_print(&menu);
@@ -18,6 +16,7 @@ void main(){
         case 1:
             printf("\n == Menu 1 : INPUT ==\n");
             /* code */
+            
             system("pause");
             break;
         
