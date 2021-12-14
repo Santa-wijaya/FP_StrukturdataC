@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lib/final_module.h"
 
 void main(){
     int status = 1, menu;
     data main_node = NULL;
-    data baru;
     date current_date;
+
+    data baru = malloc(sizeof(struct data_t));
+    baru->next = NULL;
 
     get_current_date(&current_date);
     printf("\n< Current Date : %d/%d/%d >\n\n", current_date.dd, current_date.mm, current_date.yyyy);
@@ -20,20 +20,20 @@ void main(){
             printf("\n == Menu 1 : INPUT ==\n");
             /* code */
             printf("Nama Tugas : ");
-            fflush(stdin);
-            scanf("%[^\n]",baru->nama_tugas);
-            fflush(stdin);
-            printf("Deadline : ");
+            scanf("%[^\n]", baru->nama_tugas); fflush(stdin);
+            printf("Deadline : \n");
             printf("    Tanggal : "); scanf("%d",&baru->dl_dd);
             printf("    Bulan   : "); scanf("%d",&baru->dl_mm);
             printf("    Tahun   : "); scanf("%d",&baru->dl_yyyy);
-            printf("Level Prioritas : ");
+            printf("Level Prioritas : \n");
             printf("    1. Penting & Mendesak\n");
             printf("    2. Tidak Penting & Mendesak\n");
             printf("    3. Penting & Tidak Mendesak\n");
             printf("    4. Tidak Penting & Tidak Mendesak\n");
-			printf("Pilihan :");scanf("%d",&baru->priority);
-			insert(main_node,baru);
+			
+            printf("Pilihan :");
+            scanf("%d", &baru->priority);
+			insert(main_node, baru);
 			
             system("pause");
             break;
