@@ -1,6 +1,7 @@
 #ifndef __DATA_TYPE_
     #define __DATA_TYPE_
     
+    #include <stdlib.h>
     typedef struct data_t
     {
         char nama_tugas[50];
