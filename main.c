@@ -5,6 +5,7 @@
 void main(){
     int status = 1, menu;
     data main_node = NULL;
+    data baru;
     date current_date;
 
     get_current_date(&current_date);
@@ -18,7 +19,22 @@ void main(){
         case 1:
             printf("\n == Menu 1 : INPUT ==\n");
             /* code */
-            
+            printf("Nama Tugas : ");
+            fflush(stdin);
+            scanf("%[^\n]",baru->nama_tugas);
+            fflush(stdin);
+            printf("Deadline : ");
+            printf("    Tanggal : "); scanf("%d",&baru->dl_dd);
+            printf("    Bulan   : "); scanf("%d",&baru->dl_mm);
+            printf("    Tahun   : "); scanf("%d",&baru->dl_yyyy);
+            printf("Level Prioritas : ");
+            printf("    1. Penting & Mendesak\n");
+            printf("    2. Tidak Penting & Mendesak\n");
+            printf("    3. Penting & Tidak Mendesak\n");
+            printf("    4. Tidak Penting & Tidak Mendesak\n");
+			printf("Pilihan :");scanf("%d",&baru->priority);
+			insert(main_node,baru);
+			
             system("pause");
             break;
         
