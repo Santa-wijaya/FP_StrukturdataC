@@ -17,7 +17,10 @@ data create_node(data input){
 
 void insert(data main_node, data input_node){
     data ptr = main_node;
+    data baru = create_node(input_node);
+    
     while(ptr->next != NULL) ptr = ptr->next;
-    ptr->next = input_node;
+    
+    ptr->next = baru;
 }
 

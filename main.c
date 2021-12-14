@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "lib/final_module.h"
 
-
 void main(){
     int status = 1, menu;
     data main_node = NULL;
@@ -24,7 +23,7 @@ void main(){
             break;
         
         case 2:
-            printf("\n == Menu 2 : VIEW ==\n");
+            printf("\n == Menu 2 : Cari Tugas ==\n");
             system("pause");
             /* code */
             break;
@@ -36,12 +35,24 @@ void main(){
             break;
         
         case 4:
-            printf("\n == Menu 4 : MARK AS COMPLLETE ==\n");
+            printf("\n == Menu 4 : LIHAT SEMUA TUGAS ==\n");
             /* code */
             system("pause");
             break;
         
         case 5:
+            printf("\n == Menu 5 : MARK AS COMPLLETE ==\n");
+            /* code */
+            system("pause");
+            break;
+            
+        case 6:
+            printf("\n == Menu 6 : HELP ==\n");
+            /* code */
+            system("pause");
+            break;
+        
+        case 7:
             printf("\n== THANKYOU FOR USING OUR PROGRAM SIR! ==");
             printf("\n\nCredit : ");
             printf("\n1. I Wayan Trisna Wahyudi       (2008561018)");
