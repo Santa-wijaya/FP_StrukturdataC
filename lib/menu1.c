@@ -18,12 +18,12 @@ data create_node(data input){
 
 void insert(data main_node, data input_node){
     data ptr = main_node;
-    data baru = create_node(input_node);
-    if(main_node==NULL) main_node=baru;
+    data bantu = create_node(input_node);
+    if(main_node==NULL) main_node=bantu;
     
     while(ptr->next != NULL) ptr = ptr->next;
     
-    ptr->next = baru;
+    ptr->next = bantu;
 }
 
 void input(data main_node){
@@ -42,7 +42,7 @@ void input(data main_node){
     printf("    3. Penting & Tidak Mendesak\n");
     printf("    4. Tidak Penting & Tidak Mendesak\n");
 			
-    printf("Pilihan :");
+    printf("Pilihan : ");
     scanf("%d", &baru->priority);
 	insert(main_node,baru);
 }
