@@ -8,7 +8,7 @@
         int priority;
         int dl_dd, dl_mm, dl_yyyy;
         struct data_t *next;
-    } *data;
+    } data_t;
 
     typedef struct date_t
     {

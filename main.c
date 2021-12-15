@@ -2,11 +2,11 @@
 
 void main(){
     int status = 1, menu;
-    data main_node = NULL;
+    data_t *main_node = NULL;
+    data_t *view;
     date current_date;
 
     get_current_date(&current_date);
-    printf("\n< Current Date : %d/%d/%d >\n\n", current_date.dd, current_date.mm, current_date.yyyy);
 
     while(status){
         header_print(&menu);
@@ -15,8 +15,9 @@ void main(){
         {
         case 1:
             printf("\n == Menu 1 : INPUT ==\n");
+            printf("\n< Current Date : %d/%d/%d >\n\n", current_date.dd, current_date.mm, current_date.yyyy);
             /* code */
-			input(main_node);
+			input(&main_node);
 			
             system("pause");
             break;
@@ -36,6 +37,14 @@ void main(){
         case 4:
             printf("\n == Menu 4 : LIHAT SEMUA TUGAS ==\n");
             /* code */
+            view = main_node;
+            printf("\ncurrent :");
+            while(view != NULL){
+                printf("[%s]", view->nama_tugas);
+                if(view->next != NULL) printf(" ~ ");
+                view = view->next;
+            }
+            printf("\n\n");
             system("pause");
             break;
         
