@@ -4,7 +4,7 @@
 #include "data_type.h"
 
 void header_print(int *menu){
-    system("cls");
+    // system("cls");
     printf("========================");
     printf("\n== PROGRAM TO-DO LIST ==");
     printf("\n========================");

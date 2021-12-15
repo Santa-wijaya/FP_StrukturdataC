@@ -23,9 +23,13 @@ void main(){
             break;
         
         case 2:
-            printf("\n == Menu 2 : Cari Tugas ==\n");
-            system("pause");
             /* code */
+            printf("\n == Menu 2 : Cari Tugas ==\n");
+            
+            search(&main_node);
+
+            printf("\n");
+            system("pause");
             break;
         
         case 3:

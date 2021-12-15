@@ -45,5 +45,4 @@ void input(data_t **main_node){
         ptr->next = baru;
     }
 
-    printf("\n test print\nmain : %s\ninput : %s\n", (*main_node)->nama_tugas, baru->nama_tugas);
 }
