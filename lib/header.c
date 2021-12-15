@@ -9,7 +9,7 @@ void header_print(int *menu){
     printf("\n== PROGRAM TO-DO LIST ==");
     printf("\n========================");
     printf("\nMenu : ");
-    printf("\n1. Input Tugas\n2. Tampilkan Semua Tugas\n3. Edit Tugas\n4. Mark As Complete\n5. Exit");
+    printf("\n1. Input Tugas\n2. Cari Tugas \n3. Edit Tugas\n4. Lihat Semua Tugas\n5. Mark As Completed\n6. Help\n7. Exit");
 
     printf("\nYour Choice Sir : "); scanf("%d", menu); fflush(stdin);
 }
