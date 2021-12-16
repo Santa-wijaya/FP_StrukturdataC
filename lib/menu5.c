@@ -36,7 +36,7 @@ int dateInMonth(int month, int year) {
 int dayLeft(data_t *temp_main_node) {
     int day_left;
     int day_from_month = 0;
-    date date_now;
+    date_t date_now;
     getTheDate(&date_now);
 
     for (int i = date_now.mm ; i < temp_main_node->dl_mm; i++) {
@@ -50,35 +50,13 @@ int dayLeft(data_t *temp_main_node) {
 
 void viewAll(data_t *main_node, int menu) {
     data_t *temp = main_node;
-    int nomor = 1, day_left, prioritas = 0, print = 1;
+    int nomor = 1, day_left, priority = 0, print = 1;
 
     while (temp != NULL) {
-        // Menu 3 (Sort menurut kelompok)
-        if (menu == 3 && print == 1) {
-            puts("\n=========================");
-            puts("=========================\n");
-            nomor = 1;
-            print = 0;
-        }
-        if (menu == 3 && temp->next != NULL) {
-            print = 1;
-        }
-        // Menu 4 (Sort menurut prioritas)
-        while(menu == 4 && temp->prioritas != prioritas) {
-            prioritas++;
-            nomor = 1;
-            print = 1;
-        }
-        if (menu == 4 && print == 1) {
-            puts("\n================");
-            printf("Prioritas %d\n", prioritas);
-            puts("================\n");
-            print = 0;
-        }
-
+        
         day_left = dayLeft(temp);
         printf("%d. Nama tugas    : %s\n", nomor, temp->nama_tugas);
-        printf("   Prioritas     : %d\n", temp->prioritas);
+        printf("   Prioritas     : %d\n", temp->priority);
         printf("   Deadline      : %02d/%02d/%d\n", temp->dl_dd, temp->dl_mm, temp->dl_yyyy);
         if (day_left >= 0) printf("   Sisa Waktu    : %d hari\n", day_left);
         else printf("   Sisa Waktu    : TERLAMBAT %d hari\n", abs(day_left));
