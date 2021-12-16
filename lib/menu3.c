@@ -31,8 +31,6 @@ void editdata(data_t **main_node){
 
 }
 
-
-
 void editbyDeadline (data_t **main_node){
     data_t *temp = *main_node, input_node;
     date tanggal;
@@ -73,8 +71,6 @@ void editbyDeadline (data_t **main_node){
 
 
 }
-
-
 
 
 void editbyPrioritas(data_t **main_node){
