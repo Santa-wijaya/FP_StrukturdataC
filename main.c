@@ -54,7 +54,11 @@ void main(){
         
         case 5:
             printf("\n == Menu 5 : MARK AS COMPLLETE ==\n");
-            /* code */
+             if (isEmpty(main_node)){
+		  printf("\nTugas kosong\m");
+                  continue;
+             }
+            removeNode(&main_node);
             system("pause");
             break;
             
