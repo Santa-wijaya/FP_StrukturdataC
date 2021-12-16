@@ -3,6 +3,7 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include "header.h"
+    #include "data_type.h"
     #include "menu1.h"
     #include "menu2.h"
     #include "menu3.h"
