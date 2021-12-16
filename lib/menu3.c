@@ -34,7 +34,7 @@ void editdata(data_t **main_node){
 
 
 void editbyDeadline (data_t **main_node){
-    data_t *temp = *main_node, input;
+    data_t *temp = *main_node, input_node;
     date tanggal;
     getTheDate(&tanggal);
     char find[255];
@@ -48,17 +48,17 @@ void editbyDeadline (data_t **main_node){
             while (1)
             {
                 printf("Masukan Tanggal Deadline baru (DD/MM/YY) : \n");
-                scanf("%d%d%d", &input.dl_dd, &input.dl_mm, &input.dl_yyyy); fflush(stdin);
+                scanf("%d%d%d", &input_node.dl_dd, &input_node.dl_mm, &input_node.dl_yyyy); fflush(stdin);
                 getchar();
 
-                if (input.dl_dd < tanggal.dd && input.dl_mm < tanggal.mm && input.dl_yyyy < tanggal.yyyy) 
+                if (input_node.dl_dd < tanggal.dd && input_node.dl_mm < tanggal.mm && input_node.dl_yyyy < tanggal.yyyy) 
                 {
                     printf("Tanggal tidak boleh sama sebelum hari ini.\n");
                     continue;
                 }else {
-                    temp->dl_dd = input.dl_dd;
-                    temp->dl_mm = input.dl_mm;
-                    temp->dl_yyyy = input.dl_yyyy;
+                    temp->dl_dd = input_node.dl_dd;
+                    temp->dl_mm = input_node.dl_mm;
+                    temp->dl_yyyy = input_node.dl_yyyy;
                     printf("Data Berhasil Disimpan. \n");
                     break;
                 }
