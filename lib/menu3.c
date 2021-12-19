@@ -9,15 +9,15 @@
 
 void editdata(data_t **main_node){
     data_t *temp = *main_node;
-    char nama_tugas[255], find[255];
+    char nama_tugas[225], find[225];
     printf("Input Nama Tugas yang ingin Dicari : \n");
-    scanf("%[^\n]", &nama_tugas); fflush(stdin);
+    scanf("[^\n]", &nama_tugas); fflush(stdin);
     getchar();
 
     while (temp!=NULL)
     {
         // code here
-        if (strcmp(temp->nama_tugas,find)==0){
+        if (strcmp(temp->nama_tugas,find)== 0){
             printf("Masukan Tugas baru : \n");
             scanf("%[^\n]", &find); fflush(stdin);
             getchar();
@@ -38,7 +38,7 @@ void editbyDeadline (data_t **main_node){
     date tanggal;
     getTheDate(&tanggal);
     char find[255];
-    printf("Masukan Nama Tugas yang ingin dicari : \n");
+    printf("Masukan Nama Tugas yang ingin dicari : ");
     scanf("%[^\n]", &find); fflush(stdin);
     getchar();
 
@@ -47,7 +47,7 @@ void editbyDeadline (data_t **main_node){
 
             while (1)
             {
-                printf("Masukan Tanggal Deadline baru (DD/MM/YY) : \n");
+                printf("Masukan Tanggal Deadline baru (DD/MM/YY) : ");
                 scanf("%d%d%d", &input_node.dl_dd, &input_node.dl_mm, &input_node.dl_yyyy); fflush(stdin);
                 getchar();
 
@@ -81,13 +81,13 @@ void editbyPrioritas(data_t **main_node){
     data_t *temp = *main_node;
     int prioritas;
     char find[255];
-    printf("Masukan Nama Tugas yang Ingin dicari : \n");
+    printf("Masukan Nama Tugas yang Ingin dicari : ");
     scanf("%[^\n]", &find); fflush(stdin);
 
     while (temp!=NULL)
     {
         if(strcmp(temp->nama_tugas,find) == 0){
-            printf("Masukan Nilai Prioritas Baru (1-4) : \n");
+            printf("Masukan Nilai Prioritas Baru (1-4) : ");
             scanf("%d", &prioritas); fflush(stdin);
             getchar();
             temp->priority = prioritas;
