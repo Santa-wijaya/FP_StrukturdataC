@@ -28,7 +28,11 @@ void main(){
             /* code */
             printf("\n == Menu 2 : Cari Tugas ==\n");
             
-            search(&main_node);
+            if (main_node == NULL){
+                printf("\n== Tugas Kosong! ==\n");
+            } else {
+                search(&main_node);
+            }
 
             printf("\n");
             system("pause");
@@ -37,31 +41,36 @@ void main(){
         case 3:
             printf("\n == Menu 3 : EDIT ==\n");
             /* code */
+            if (main_node == NULL){
+                printf("\n== Tugas Kosong! ==\n");
+            } else {
+                editdata(&main_node);
+            }
             system("pause");
             break;
         
         case 4:
-            printf("\n == Menu 4 : LIHAT SEMUA TUGAS ==\n");
-            /* code */
-            view = main_node;
-            printf("\ncurrent :");
-            while(view != NULL){
-                printf("[%s]", view->nama_tugas);
-                if(view->next != NULL) printf(" ~ ");
-                view = view->next;
+            printf("\n == Menu 4 : LIHAT TUGAS ==\n");
+
+            // this is the code
+            if (main_node == NULL){
+                printf("\n== Tugas Kosong! ==\n");
+            } else {
+                menu_view(&main_node);
             }
-            printf("\n\n");
+
             system("pause");
             break;
         
         case 5:
             printf("\n == Menu 5 : MARK AS COMPLLETE ==\n");
 	     /* code */
-             if (isEmpty(main_node)){
-		        printf("\nTugas kosong\n");
-                 continue;
-             }
-            removeNode(&main_node);
+            if (main_node == NULL){
+                printf("\n== Tugas Kosong! ==\n");
+            } else {
+                removeNode(&main_node);
+            }
+            printf("\n");
             system("pause");
             break;
             
@@ -85,6 +94,7 @@ void main(){
             break;
         
         default:
+            if(menu < 1 || menu > 7)
             printf("\n====================");
             printf("\n== INVALID INPUT! ==");
             printf("\n====================\n");

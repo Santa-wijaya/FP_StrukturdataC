@@ -1,9 +1,11 @@
 {
     "files.associations": {
         "menu1.h": "c",
+        "menu4.h": "c",
         "header.h": "c",
         "stdio.h": "c",
         "data_type.h": "c",
-        "final_module.h": "c"
+        "final_module.h": "c",
+        "ctype.h": "c"
     }
 }
