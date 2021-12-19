@@ -99,11 +99,11 @@ void main(){
 
         case 5:
             printf("\n====================================");
-            printf("\n    MENU 5 : MARK AS COMPLETE\n");
-            printf("\n====================================");
+            printf("\n    MENU 5 : MARK AS COMPLETE");
+            printf("\n====================================\n");
 	     /* code */
             if (main_node == NULL){
-                printf("\n==         Tugas Kosong!          ==\n");
+                printf("==         Tugas Kosong!          ==\n");
             } else {
                 removeNode(&main_node);
             }
