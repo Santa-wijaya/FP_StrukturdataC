@@ -143,9 +143,9 @@ void guide(){
 				puts("Menu ini akan menampilkan daftar");
 				puts("tugas yang terdiri atas Nama Tugas");
 				puts(", Deadline, Prioritas, dan Sisa");
-				puts("Waktu. Anda dapat menginputkan nomor");
-				puts("dari daftar tugas untuk menandai/");
-				puts("menghapus tugas tersebut dari daftar.");
+				puts("Waktu. Anda dapat menginputkan Nama");
+				puts("Tugas yang diinginkan untuk ditandai/");
+				puts("dihapus dalam daftar data.");
 				puts("====================================");
 			    system("pause");
 				break;
