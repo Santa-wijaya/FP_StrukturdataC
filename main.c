@@ -3,7 +3,7 @@
 #include "lib/final_module.h"
 
 void main(){
-    int status = 1, menu;
+    int status = 0, menu;
     data_t *main_node = NULL;
     data_t *view;
     date current_date;
