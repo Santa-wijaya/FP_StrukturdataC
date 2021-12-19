@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include "data_type.h"
 
+void heading(int n){
+	system("cls");
+	puts("====================================");
+	if(n==1) puts("            INPUT DATA");
+	else if(n==2) puts("             CARI TUGAS");
+	else if(n==3) puts("             EDIT TUGAS");
+	else if(n==4) puts("         LIHAT SEMUA TUGAS");
+	else if(n==5) puts("         MARK AS COMPLETE");
+	else if(n==6) puts("                EXIT");
+	else puts("               GUIDE");
+	puts("====================================");
+}
+
 void guide(){
 	int pil,status=0;
 	do{
@@ -157,15 +170,3 @@ void guide(){
 	}while(status!=1);
 }
 
-void heading(int n){
-	system("cls");
-	puts("====================================");
-	if(n==1) puts("            INPUT DATA");
-	else if(n==2) puts("             CARI TUGAS");
-	else if(n==3) puts("             EDIT TUGAS");
-	else if(n==4) puts("         LIHAT SEMUA TUGAS");
-	else if(n==5) puts("         MARK AS COMPLETE");
-	else if(n==6) puts("                EXIT");
-	else puts("               GUIDE");
-	puts("====================================");
-}

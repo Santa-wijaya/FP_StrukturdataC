@@ -16,5 +16,9 @@
     {
         int dd, mm, yyyy;
     }date;
+
+    typedef struct login_t{
+        char user_name[50], password[30];
+    } login_t;
     
 #endif

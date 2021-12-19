@@ -10,6 +10,7 @@ void main(){
     int options;
 
     get_current_date(&current_date);
+    loginToContinue(&status);
 
     while(status){
         header_print(&menu);
