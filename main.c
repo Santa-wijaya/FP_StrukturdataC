@@ -58,8 +58,8 @@ void main(){
             printf("\n == Menu 5 : MARK AS COMPLLETE ==\n");
 	     /* code */
              if (isEmpty(main_node)){
-		  printf("\nTugas kosong\n");
-                  continue;
+		        printf("\nTugas kosong\n");
+                 continue;
              }
             removeNode(&main_node);
             system("pause");

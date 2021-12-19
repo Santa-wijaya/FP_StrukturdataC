@@ -36,7 +36,7 @@ int dateInMonth(int month, int year) {
 int dayLeft(data_t *temp_main_node) {
     int day_left;
     int day_from_month = 0;
-    date_t date_now;
+    date date_now;
     getTheDate(&date_now);
 
     for (int i = date_now.mm ; i < temp_main_node->dl_mm; i++) {
