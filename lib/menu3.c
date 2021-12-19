@@ -12,6 +12,7 @@ void editdata(data_t **main_node){
     char nama_tugas[255], find[255];
     printf("Input Nama Tugas yang ingin Dicari : \n");
     scanf("%[^\n]", &nama_tugas); fflush(stdin);
+    getchar();
 
     while (temp!=NULL)
     {
@@ -24,7 +25,7 @@ void editdata(data_t **main_node){
             printf("Tugas baru berhasil di simpan \n");
         }
         temp=temp->next;
-        
+
     }
     if(temp == NULL){
         printf("Data tidak ditemukan.\n");
@@ -50,7 +51,7 @@ void editbyDeadline (data_t **main_node){
                 scanf("%d%d%d", &input_node.dl_dd, &input_node.dl_mm, &input_node.dl_yyyy); fflush(stdin);
                 getchar();
 
-                if (input_node.dl_dd < tanggal.dd && input_node.dl_mm < tanggal.mm && input_node.dl_yyyy < tanggal.yyyy) 
+                if (input_node.dl_dd < tanggal.dd && input_node.dl_mm < tanggal.mm && input_node.dl_yyyy < tanggal.yyyy)
                 {
                     printf("Tanggal tidak boleh sama sebelum hari ini.\n");
                     continue;
@@ -61,7 +62,7 @@ void editbyDeadline (data_t **main_node){
                     printf("Data Berhasil Disimpan. \n");
                     break;
                 }
-                
+
             }
             return;
 
@@ -97,7 +98,7 @@ void editbyPrioritas(data_t **main_node){
     if (temp==NULL){
         printf("Data Yang dicari tidak ada.\n");
     }
-    
+
 }
 
 
