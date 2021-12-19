@@ -7,6 +7,7 @@ void main(){
     data_t *main_node = NULL;
     data_t *view;
     date current_date;
+    int options;
 
     get_current_date(&current_date);
 
@@ -20,14 +21,14 @@ void main(){
             printf("\n< Current Date : %d/%d/%d >\n\n", current_date.dd, current_date.mm, current_date.yyyy);
             /* code */
 			input(&main_node);
-			
+
             system("pause");
             break;
-        
+
         case 2:
             /* code */
             printf("\n == Menu 2 : Cari Tugas ==\n");
-            
+
             if (main_node == NULL){
                 printf("\n== Tugas Kosong! ==\n");
             } else {
@@ -37,18 +38,44 @@ void main(){
             printf("\n");
             system("pause");
             break;
-        
+
         case 3:
             printf("\n == Menu 3 : EDIT ==\n");
             /* code */
             if (main_node == NULL){
                 printf("\n== Tugas Kosong! ==\n");
             } else {
-                editdata(&main_node);
+                printf("Menu Edit\n");
+                printf("1.  Nama\n");
+                printf("2.  Deadline\n");
+                printf("3.  Prioritas\n");
+                printf("4.  Back to main menu\n");
+                printf("Input : ");
+                scanf("%d", &options);
+                getchar();
+                if(options == 1) {
+                    editdata(&main_node);
+                    break;
+                }
+                else if(options == 2){
+                    editbyDeadline(&main_node);
+                    break;
+                }
+                else if(options == 3){
+                    editbyPrioritas(&main_node);
+                    break;
+                }
+                else if( options == 4){
+                    break;
+                }
+                else
+                printf("input no 1 - 4 gan :D");
+                getchar();
+                continue;
             }
             system("pause");
             break;
-        
+
         case 4:
             printf("\n == Menu 4 : LIHAT TUGAS ==\n");
 
@@ -61,7 +88,7 @@ void main(){
 
             system("pause");
             break;
-        
+
         case 5:
             printf("\n == Menu 5 : MARK AS COMPLLETE ==\n");
 	     /* code */
@@ -73,13 +100,13 @@ void main(){
             printf("\n");
             system("pause");
             break;
-            
+
         case 6:
             printf("\n == Menu 6 : HELP ==\n");
             /* code */
             system("pause");
             break;
-        
+
         case 7:
             printf("\n== THANKYOU FOR USING OUR PROGRAM SIR! ==");
             printf("\n\nCredit : ");
@@ -92,7 +119,7 @@ void main(){
             system("pause");
             status = 0;
             break;
-        
+
         default:
             if(menu < 1 || menu > 7)
             printf("\n====================");
