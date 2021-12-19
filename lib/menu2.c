@@ -69,7 +69,9 @@ void search(data_t **main_node){
     
     while(ulang){
         system("cls");
-        printf("\n == Menu 2 : Cari Tugas ==\n");
+        printf("\n====================================");
+        printf("\n        MENU 2 : CARI TUGAS");
+        printf("\n====================================");
         printf("\nCari Berdasarkan : \n1. Nama Tugas\n2. Deadline\n3. Priority\n4. Kembali ke menu utama");
         printf("\nYour Choice Sir : ");
         scanf("%d", &searchBy); fflush(stdin);

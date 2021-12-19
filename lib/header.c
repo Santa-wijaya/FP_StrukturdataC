@@ -5,9 +5,9 @@
 
 void header_print(int *menu){
     system("cls");
-    printf("========================");
-    printf("\n== PROGRAM TO-DO LIST ==");
-    printf("\n========================");
+    printf("\n====================================");
+    printf("\n         PROGRAM TO-DO LIST");
+    printf("\n====================================");
     printf("\nMenu : ");
     printf("\n1. Input Tugas\n2. Cari Tugas \n3. Edit Tugas\n4. Lihat Semua Tugas\n5. Mark As Completed\n6. Help\n7. Exit");
 

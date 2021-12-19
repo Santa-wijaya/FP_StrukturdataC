@@ -9,4 +9,5 @@
     #include "menu3.h"
     #include "menu4.h"
     #include "menu5.h"
+    #include "menu6.h"
 #endif
