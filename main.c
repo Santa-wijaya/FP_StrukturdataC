@@ -34,7 +34,7 @@ void main(){
             printf("\n====================================");
 
             if (main_node == NULL){
-                printf("\n== Tugas Kosong! ==\n");
+                printf("\n==         Tugas Kosong!          ==\n");
             } else {
                 search(&main_node);
             }
@@ -49,9 +49,9 @@ void main(){
             printf("\n====================================");
             /* code */
             if (main_node == NULL){
-                printf("\n== Tugas Kosong! ==\n");
+                printf("\n==         Tugas Kosong!          ==\n");
             } else {
-                printf("Menu Edit\n");
+                printf("\nMenu Edit\n");
                 printf("1.  Nama\n");
                 printf("2.  Deadline\n");
                 printf("3.  Prioritas\n");
