@@ -9,20 +9,19 @@
 
 void editdata(data_t **main_node){
     data_t *temp = *main_node;
-    char nama_tugas[225], find[225];
+    char nama[225], find[225];
     printf("Input Nama Tugas yang ingin Dicari : \n");
-    scanf("[^\n]", &nama_tugas); fflush(stdin);
-    getchar();
+    scanf("%[^\n]", &find); fflush(stdin);
 
     while (temp!=NULL)
     {
         // code here
         if (strcmp(temp->nama_tugas,find)== 0){
             printf("Masukan Tugas baru : \n");
-            scanf("%[^\n]", &find); fflush(stdin);
-            getchar();
-            strcpy(temp->nama_tugas, find);
+            scanf("%[^\n]", &nama); fflush(stdin);
+            strcpy(temp->nama_tugas, nama);
             printf("Tugas baru berhasil di simpan \n");
+            break;
         }
         temp=temp->next;
 
@@ -40,16 +39,16 @@ void editbyDeadline (data_t **main_node){
     char find[255];
     printf("Masukan Nama Tugas yang ingin dicari : ");
     scanf("%[^\n]", &find); fflush(stdin);
-    getchar();
+
 
     while(temp!=NULL){
         if(strcmp(temp->nama_tugas,find) == 0){
 
             while (1)
             {
-                printf("Masukan Tanggal Deadline baru (DD/MM/YY) : ");
+                printf("Masukan Tanggal Deadline baru (DD/MM/YYYY) : ");
                 scanf("%d%d%d", &input_node.dl_dd, &input_node.dl_mm, &input_node.dl_yyyy); fflush(stdin);
-                getchar();
+                //getchar();
 
                 if (input_node.dl_dd < tanggal.dd && input_node.dl_mm < tanggal.mm && input_node.dl_yyyy < tanggal.yyyy)
                 {
@@ -89,7 +88,7 @@ void editbyPrioritas(data_t **main_node){
         if(strcmp(temp->nama_tugas,find) == 0){
             printf("Masukan Nilai Prioritas Baru (1-4) : ");
             scanf("%d", &prioritas); fflush(stdin);
-            getchar();
+            //getchar();
             temp->priority = prioritas;
             printf("Data Baru tersimpan.\n");
         }
