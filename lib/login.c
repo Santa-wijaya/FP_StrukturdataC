@@ -68,7 +68,9 @@ void loginToContinue(int *main_status){
     
     while(status){    
         system("cls");
-        printf("\n== Wellcome To Our Pogram Sir! ==\n");
+        printf("\n====================================");
+        printf("\n==  Wellcome To Our Pogram Sir!   ==");
+        printf("\n====================================");
         printf("\n1. Login\n2. Register\n3. Quit");
         printf("\nYour Choice Sir : ");
         scanf("%d", &login_menu); fflush(stdin);
@@ -92,7 +94,9 @@ void loginToContinue(int *main_status){
             
             if(*main_status){
                 status = 0;
-                printf("\n==      Login Success!      ==\n");
+                printf("\n====================================");
+            	printf("\n          LOGIN SUCCESS");
+            	printf("\n====================================");
                 printf("\npress any key to continue sir!\n");
                 
                 getchar();            } 
@@ -104,7 +108,9 @@ void loginToContinue(int *main_status){
         
         case 2:
             /* register */
-            printf("\n== Input Your Data Sir == ");
+            printf("\n====================================");
+            printf("\n==       Input Your Data Sir      ==");
+            printf("\n====================================");
             printf("\nUsername : ");
             scanf("%[^\n]", temp_input.user_name); fflush(stdin);
 
@@ -116,7 +122,9 @@ void loginToContinue(int *main_status){
             register_user(table, temp_input);
             saveToFile(&temp_input);
 
-            printf("\n== Data User Berhasil Disimpan ==\n");
+            printf("\n====================================");
+			printf("\n==   Data User Berhasil Disimpan  ==");
+			printf("\n====================================\n");
             system("pause");
             break;
         
@@ -127,9 +135,9 @@ void loginToContinue(int *main_status){
         
         default:
             if(login_menu < 1 || login_menu > 3)
-                printf("\n====================");
-                printf("\n== INVALID INPUT! ==");
-                printf("\n====================\n");
+                printf("\n====================================");
+            	printf("\n==         INVALID INPUT!         ==");
+            	printf("\n====================================");
                 system("pause");
             break;
         }

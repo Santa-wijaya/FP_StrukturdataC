@@ -15,7 +15,9 @@ void menu_view(data_t **main_node){
     data_t *spesific_view = *main_node;
 
     system("cls");
-    printf("\n == Menu 4 : LIHAT TUGAS ==\n");
+    printf("\n====================================");
+    printf("\n    MENU 4 : LIHAT SEMUA TUGAS");
+	printf("\n====================================");
     printf("\n1. Tampilkan Semua Tugas\n2. Lihat Spesifik\n3. Back To Main Menu");
     printf("\nYour Choice Sir : ");
     scanf("%d", &pilihan); fflush(stdin);
@@ -68,9 +70,9 @@ void menu_view(data_t **main_node){
         
         default:
             if(pilihan < 1 || pilihan > 3){
-                printf("\n====================");
-                printf("\n== INVALID INPUT! ==");
-                printf("\n====================\n");
+                printf("\n====================================");
+            	printf("\n==         INVALID INPUT!         ==");
+            	printf("\n====================================");
                 system("pause");
             }
             break;
