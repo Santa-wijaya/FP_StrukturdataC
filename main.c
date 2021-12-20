@@ -4,10 +4,10 @@
 
 void main(){
     int status = 0, menu;
+    int options;
     data_t *main_node = NULL;
     data_t *view;
     date current_date;
-    int options;
 
     get_current_date(&current_date);
     loginToContinue(&status);
@@ -21,9 +21,8 @@ void main(){
         	printf("\n====================================");
             printf("\n        MENU 1 : INPUT TUGAS");
             printf("\n====================================");
-            printf("\n< Current Date : %d/%d/%d >\n\n", current_date.dd, current_date.mm, current_date.yyyy);
             /* code */
-			input(&main_node);
+			input(&main_node, &current_date);
 
             system("pause");
             break;
