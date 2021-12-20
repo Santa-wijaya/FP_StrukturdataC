@@ -39,12 +39,32 @@ int dayLeft(data_t *temp_main_node) {
     date date_now;
     getTheDate(&date_now);
 
-    for (int i = date_now.mm ; i < temp_main_node->dl_mm; i++) {
-        day_from_month += dateInMonth(i, temp_main_node->dl_yyyy);
+    if(temp_main_node->dl_yyyy == date_now.yyyy){
+
+        for (int i = date_now.mm ; i < temp_main_node->dl_mm; i++) {
+            day_from_month += dateInMonth(i, temp_main_node->dl_yyyy);
+        }
+        
+        day_left = (temp_main_node->dl_dd - date_now.dd) + day_from_month;
+        
+    } else {
+        int dif_day, dif_year, to_end_of_year, from_last_year;
+
+        dif_year = temp_main_node->dl_yyyy - date_now.yyyy;
+        
+        for (int i = date_now.mm ; i < 12; i++) {
+            day_from_month += dateInMonth(i, temp_main_node->dl_yyyy);
+        }
+        
+        for (int i = 1 ; i <= temp_main_node->dl_mm ; i++) {
+            day_from_month += dateInMonth(i, temp_main_node->dl_yyyy);
+        }
+
+        dif_day = day_from_month - date_now.dd + temp_main_node->dl_dd;
+        
+        day_left = (dif_year-1)*365 + dif_day;
     }
-    
-    day_left = (temp_main_node->dl_dd - date_now.dd) + day_from_month + \
-                365 * (temp_main_node->dl_yyyy - date_now.yyyy);
+
     return day_left;
 }
 
