@@ -31,7 +31,7 @@ void input(data_t **main_node, date *now){
         printf("    Bulan   : "); scanf("%d", &dl_mm);
         printf("    Tahun   : "); scanf("%d", &dl_yyyy);
 
-        if(dl_dd < now->dd && (dl_mm <= now->mm || dl_yyyy <= now->mm)){
+        if(dl_dd < now->dd && ((dl_mm < now->mm && dl_yyyy == now->yyyy) || dl_yyyy < now->mm)){
             puts("\n=====================================");
             puts("=== TIDAK BOLEH MEMASUKAN TANGGAL ===");
             puts("===    SEBELUM TANGGAL HARI INI   ===");
